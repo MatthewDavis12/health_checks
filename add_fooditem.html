@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Food Item</title>
+
+        <style>
+            * {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                border: 2px solid black;
+                margin-bottom: 5px;
+            }
+
+            #interface {
+                width: 50%;
+                margin-left: 25%;
+                align-items: center;
+            }
+
+            form {
+                padding: 15px;
+                border: 2px solid black;
+            }
+
+            textarea {
+                vertical-align: middle;
+            }
+
+            .button {
+                margin-left: 20px;
+            }
+
+            #back {
+                margin: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="interface">
+            <h1>Add Food Item</h1>
+
+            <form action="admin_page.html">
+                <!-- Food Name -->
+                <lable for="name">Food Name: </lable>
+                <input type="text" id="name" name="name" required/><br/>
+                <br/>
+
+                 <!-- Food Image -->
+                 <lable for="img">Food Image: </lable>
+                 <input type="url" id="img" name="img" required/><br/>
+                 <br/>
+
+                <!-- Description -->
+                <lable for="description">Food Description: </lable>
+                <textarea id="description" name="description" rows="5" cols="50" required minlength="10"></textarea>
+                <br/><br/>
+                
+                <!-- Available -->
+                <label for="av">Available?</label>
+                <input type="checkbox" id="av" name="options" value="av"/>
+                <br/><br/>
+                
+                <!-- Vegeterian -->
+                <label for="veg">Vegeterian?</label>
+                <input type="checkbox" id="veg" name="options" value="veg"/>
+                <br/><br/>
+
+                <!-- Category -->
+                <label for="cat">Catagory: </label>
+                <select id="cat" name="cat" required>
+                    <option value="pasta">Pasta</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="sandwhich">Sandwhich</option>
+                    <option value="soup">Soup</option>
+                </select>
+                <br/><br/>
+
+                <!-- Cuisine -->
+                <label for="cui">Cuisine: </label>
+                <select id="cui" name="cui" required>
+                    <option value="italian">Italian</option>
+                    <option value="asian">Asian</option>
+                    <option value="chinese">Chinese</option>
+                </select>
+                <br/><br/>
+
+                <!-- Buttons -->
+                <input type="reset" value="Discard"/>
+                <input type="submit" value="Submit" class="button"/>
+            </form>
+
+            <!-- Back -->
+            <button id="back" onclick="window.location.href='admin_page.html'">Back</button>
+        </div>
+    </body>
+</html>
